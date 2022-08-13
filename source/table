@@ -1,0 +1,26 @@
+<table class="catalog__add-table">
+          <tr>
+            <td>Сахарозаменитель</td>
+            <td>1 упаковка (100 г)</td>
+            <td>200 Р.</td>
+            <td><button class="button" type="button">заказать</button></td>
+          </tr>
+          <tr>
+            <td>Питьевая вода</td>
+            <td>5 литров</td>
+            <td>50 Р.</td>
+            <td><button class="button" type="button">заказать</button></td>
+          </tr>
+          <tr>
+            <td>молоко</td>
+            <td>1 литр</td>
+            <td>100 Р.</td>
+            <td><button class="button" type="button">заказать</button></td>
+          </tr>
+          <tr>
+            <td>витамины</td>
+            <td>1 упаковка (30 г)</td>
+            <td>300 Р.</td>
+            <td><button class="button" type="button">заказать</button></td>
+          </tr>
+        </table>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>«Кэт энерджи»</title>
+</head>
+
+<body class="page__body">
+  <header class="main-header">
+    <a class="main-header__logo" href="index.html">
+      <img src="img/logo.svg" width="202" height="59" alt="Кэт энерджи логотип"> </a>
+    <nav class="nav">
+      <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="nav__wrapper">
+        <ul class="nav__list">
+          <li class="nav__list-item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="nav__list-item nav__list-item--current">
+            <a href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="page__main">
+    <h1 class="main__title">Подбор программы</h1>
+    <p class="main__title-slogan">Заполните анкету, и мы подберем
+      программу питания для вашего кота</p>
+    <div class="form__container">
+      <div class="form__pet">
+        <h2 class="visually-hidden">Данные кота</h2>
+        <div class="form__pet-name">
+          <label class="form__pet-name" for="form__pet-name-input">имя:*</label>
+          <input class="form__pet-name-input" type="text" id="form__pet-name-input" placeholder="барсик">
+        </div>
+        <div class="form__pet-weight">
+          <label class="form__pet-weight" for="form__pet-weight-input">вес (кг):*</label>
+          <input class="form__pet-weight-input" type="text" id="form__pet-weight-input" placeholder="7">
+        </div>
+        <div class="form__pet-age">
+          <label class="form__pet-age" for="form__pet-age-input">Возраст (лет):</label>
+          <input class="form__pet-age-input" type="text" id="form__pet-age-input" placeholder="7">
+        </div>
+        <ul class="form__pet-point">
+          <li class="form__pet-point">
+            <label class="form__pet-point-slim" for="form__pet-point-slim-input">
+              <input class="form__pet-point-slim-input" type="radio" id="form__pet-point-slim-input"
+                checked>похудение</label>
+          </li>
+          <li class="form__pet-point">
+            <label class="form__pet-point-power" for="form__pet-point-power-input">
+              <input class="form__pet-point-power-input" type="radio" id="form__pet-point-power-input">Набор
+              массы</label>
+          </li>
+          <li class="form__pet-point">
+            <label class="form__pet-point-advice" for="form__pet-point-advice-input">
+              <input class="form__pet-point-advice-input" type="radio" id="form__pet-point-advice-input">Не знаю (Нужен
+              ваш совет)</label>
+          </li>
+        </ul>
+      </div>
+      <div class="form__pet-owner">
+        <h2 class="form__pet-owner-contacts">Контактные данные (владельца кота)</h2>
+        <div>
+          <label class="form__pet-owner-email" for="form__pet-owner-email-input">E-mail:*</label>
+          <input class="form__pet-owner-email-input" type="text" id="form__pet-owner-email-input"
+            placeholder="кuklachev@gmail.com">
+        </div>
+        <div>
+          <label class="form__pet-owner-phone" for="form__pet-owner-phone-input">Телефон:*</label>
+          <input class="form__pet-owner-phone-input" type="text" id="form__pet-owner-phone-input"
+            placeholder="8 (960) 900-60-90">
+        </div>
+      </div>
+      <div class="form__pet-comment">
+        <h2 class="form__pet-comment-title">Комментарий</h2>
+        <div>
+          <label class="form__pet-comment-text" for="form__pet-comment-text-input"></label>
+          <input class="form__pet-comment-text-input" type="text" id="form__pet-comment-text-input"
+            placeholder="Расскажите обо всех повадках кота">
+        </div>
+      </div>
+      <div class="form__pet-add">
+        <h2 class="form__pet-add-title">Дополнительно</h2>
+        <div>
+          <ul class="form__pet-add-list">
+            <li class="form__pet-add-list-item">
+              <label class="form__pet-add-sugar" for="form__pet-add-sugar-input">
+                <input class="form__pet-add-sugar-input" type="checkbox" id="form__pet-add-sugar-input"
+                  checked>сахарозаменитель</label>
+            </li>
+            <li class="form__pet-add-list-item">
+              <label class="form__pet-add-water" for="form__pet-add-water-input">
+                <input class="form__pet-add-water-input" type="checkbox" id="form__pet-add-water-input">питьевая
+                вода</label>
+            </li>
+            <li class="form__pet-add-list-item">
+              <label class="form__pet-add-milk" for="form__pet-add-milk-input">
+                <input class="form__pet-add-milk-input" type="checkbox" id="form__pet-add-milk-input">молоко</label>
+            </li>
+            <li class="form__pet-add-list-item">
+              <label class="form__pet-add-vitamins" for="form__pet-add-vitamins-input">
+                <input class="form__pet-add-vitamins-input" type="checkbox"
+                  id="form__pet-add-vitamins-input">витамины</label>
+            </li>
+          </ul>
+        </div>
+        <button class="button">отправить заявку</button>
+        <p class="form__add-info">* — Обязательные поля</p>
+      </div>
+    </div>
+    <section class="adress">
+      <div class="adress-cooperation">
+        <h3 class="adress-cooperation-title">приглашаем
+          к сотрудничеству
+          дилеров!</h3>
+        <p class="adress-cooperation-street">ул. Большая Конюшенная, д. 19/8</p>
+        <p class="adress-cooperation-city">Санкт-Петербург</p>
+      </div>
+      <img src="img/location.jpg" width="320" height="362" alt="Местоположение магазина">
+    </section>
+  </main>
+  <footer class="page-footer">
+    <a class="page-footer__logo">
+      <img src="img/footer_logo.svg" width="128" height="24" alt="Кэт энерджи логотип"> </a>
+    <div class="footer__social">
+      <a href="https://vk.com/htmlacademy">
+        <span class="footer__social-vk visually-hidden">вконтакте</span>
+      </a>
+      <a href="https://www.youtube.com/user/htmlacademyru">
+        <span class="footer__social-youtube visually-hidden">ютуб</span></a>
+      <a href="https://t.me/htmlacademy"><span class="footer__social-telegram visually-hidden">телеграм</span></a>
+    </div>
+    <div class="html-academy__logo">
+      <a class="html-academy__logo-link" href=""><span class="visually-hidden">html-academy</span></a>
+    </div>
+  </footer>
+</body>
+
+</html>
