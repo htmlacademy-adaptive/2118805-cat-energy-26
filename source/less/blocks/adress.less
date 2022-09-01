@@ -1,33 +1,47 @@
-.adress {
-  box-sizing: border-box;
-  height: 400px;
-  background-image: url("../img/map.png");
-  background-repeat: no-repeat;
-  padding: 95px 765px 107px 110px;
-  position: relative;
-}
-
 .adress-cooperation {
-  box-sizing: border-box;
   .flexible ();
-  padding: 56px 80px;
-  height: 198px;
-  background-color: #ffffff;
+  padding: 26px 20px;
+  margin: 0 -20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 56px 70px;
+    margin: 0 -30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 565px;
+    height: 198px;
+    box-sizing: border-box;
+    padding: 56px 80px;
+    margin: 95px 765px 107px 0;
+    position: relative;
+    z-index: 3;
+  }
 }
 
-.adress__map-icon {
-  position: absolute;
-  top: 131px;
-  right: 419px;
-  bottom: 163px;
-  left: 908px;
+.adress-cooperation__margin {
+  @media (min-width: @tablet-width) {
+    padding: 56px 70px;
+    margin: 0 -70px;
+  }
+}
+
+.adress-cooperation__bkgd {
+  @media (max-width: @desktop-width) {
+    background-color: #f2f2f2;
+  }
 }
 
 .adress-cooperation__title {
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 16px;
+  line-height: 20px;
   text-transform: uppercase;
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .adress-cooperation__street {
@@ -37,4 +51,9 @@
 
 .adress-cooperation__city {
   font-family: @arial;
+}
+
+.adress__map-icon {
+  position: absolute;
+  display: none;
 }

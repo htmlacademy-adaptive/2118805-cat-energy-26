@@ -1,40 +1,68 @@
 .fitchers {
-  display: flex;
-  justify-content: space-between;
-  padding: 82px 110px 0;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 526px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    .flexible ();
+    margin: 281px 0 0;
+  }
 }
 
 .fitchers__block {
+  width: 280px;
+  height: 266px;
   background-color: @color;
-  width: 570px;
-  height: 374px;
-  box-sizing: border-box;
-  padding: 77px 52px 55px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    height: 372px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    height: 374px;
+  }
 }
 
 .fitchers__title {
-  margin: 0;
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .fitchers__link {
   text-transform: uppercase;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 16px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .fitchers__desc {
   font-family: @arial;
-  margin-top: 73px;
-  margin-bottom: 25px;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .fitchers__link-arrow {
   position: absolute;
-  top: 10px;
-  left: 30px;
+  margin-left: 15px;
 }

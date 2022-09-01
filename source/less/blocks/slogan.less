@@ -1,0 +1,118 @@
+.slogan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 30px;
+    align-items: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 110px;
+    align-items: flex-start;
+  }
+}
+
+.slogan__bcgd-image-mobile {
+  width: 320px;
+  height: 302px;
+  background-image: url("../img/cat_bcgd_mobile.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    width: auto;
+    height: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 720px;
+    height: 694px;
+    background-image: url("../img/cat_bcgd.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -117px;
+    left: 610px;
+  }
+}
+
+.slogan__bcgd-image-mobile::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(104, 183, 56, 0.85);
+  top: 0;
+  left: 0;
+}
+
+.slogan__title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #ffffff;
+  position: relative;
+  z-index: 4;
+
+  @media (min-width: @tablet-width) {
+    color: #000000;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.slogan__title-slogan {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 4;
+
+  @media (min-width: @tablet-width) {
+    color: #000000;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.slogan__img {
+  position: absolute;
+  width: 280px;
+  height: 270px;
+  z-index: 4;
+  top: 167px;
+  left: 20px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    top: 267px;
+    left: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 600px;
+  }
+}
+
+.slogan__title-button {
+  margin-top: 302px;
+  width: 280px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    margin-top: 49px;
+    position: relative;
+    z-index: 5;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 52px;
+  }
+}

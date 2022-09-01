@@ -1,122 +1,150 @@
-.form {
-  padding: 0 110px;
-}
-
 .form__pet {
-  .flexible ();
-  height: 196px;
+  font-size: 16px;
+  line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .flexible ();
+  }
 }
 
 .form__pet-list {
-  padding: 0;
-  margin: 0;
   text-transform: uppercase;
-  font-size: 20px;
-  line-height: 30px;
+  list-style: none;
+  padding: 0;
 }
 
 .form__pet-point {
-  padding: 30px 0 0 0;
-  width: 570px;
-  height: 196px;
   border: 1px solid #e7e7e7;
   list-style: none;
   box-sizing: border-box;
+  padding: 0;
 }
 
 .form__pet-point-list {
-  margin-bottom: 18px;
   text-transform: uppercase;
-  font-size: 20px;
-  line-height: 30px;
-}
-
-.form__pet-name {
-  margin-bottom: 20px;
-  .flexible;
-  height: 52px;
-}
-
-.form__pet-weight {
-  margin-bottom: 20px;
-  .flexible ();
-}
-
-.form__pet-age {
-  .flexible ();
 }
 
 .form__pet-name-input,
 .form__pet-weight-input,
 .form__pet-age-input {
   text-transform: uppercase;
-  font-size: 20px;
-  line-height: 30px;
-  height: 52px;
   box-sizing: border-box;
 }
 
 .form__pet-owner-contacts {
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 26px;
   font-weight: 400;
-  margin: 69px 0 76px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 400;
+  }
 }
 
 .form__pet-owner-email,
 .form__pet-owner-phone,
 .form__pet-owner-email-input,
 .form__pet-owner-phone-input {
-  text-transform: uppercase;
-  font-size: 20px;
-  line-height: 30px;
-  height: 50px;
   box-sizing: border-box;
-}
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
 
-.form__pet-owner-block {
-  .flexible ();
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__pet-comment-title {
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 26px;
   font-weight: 400;
-  margin: 69px 0 76px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 400;
+  }
 }
 
 .form__pet-comment-text-input {
-  width: 1220px;
-  height: 174px;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
-  font-family: inherit;
-  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__pet-add-title {
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 26px;
   font-weight: 400;
-  margin: 67px 0 57px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 400;
+  }
 }
 
 .form__pet-add-list {
   list-style: none;
-  .flexible ();
-  height: 40px;
-  margin-bottom: 61px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    .flexible ();
+  }
 }
 
-.pet-add__button {
-  height: 52px;
-  width: 568px;
-  margin-bottom: 82px;
+.form__pet-owner-block {
+  @media (min-width: @desktop-width) {
+    .flexible ();
+  }
+}
+
+.form__pet-add-list-item {
+  @media (min-width: @tablet-width) {
+    width: 221px;
+  }
+}
+
+.form__pet-add-wrapper {
+  @media (min-width: @tablet-width) {
+    .flexible();
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
 .form__add-info {
-  margin-left: 81px;
   font-family: @arial;
+  line-height: 16px;
 }
