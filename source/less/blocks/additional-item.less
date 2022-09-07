@@ -1,53 +1,118 @@
 .additional-item__title {
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 24px;
   font-weight: 400;
-  margin: 76px 0 81px 110px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.additional-item__block {
+  @media (min-width: @desktop-width) {
+    .flexible ();
+  }
 }
 
 .additional-item__list {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 86px;
-}
-
-.additional-item__item-title {
-  font-size: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
-  font-weight: 400;
-}
-
-.additional-item__block {
-  .flexible ();
-  margin: 0 110px;
 }
 
 .additional-item__item {
-  .flexible ();
-  width: 896px;
-  height: 72px;
+  @media (min-width: @desktop-width) {
+    .flexible ();
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 500px 300px;
+    gap: 100px;
+  }
+}
+
+.additional-item__item-block {
+  @media (min-width: @tablet-width) {
+    .flexible ();
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 200px 200px;
+  }
+}
+
+.additional-item__item-title {
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additional-item__item-info {
   font-family: @arial;
+  font-size: 14px;
+  line-height: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .additional-item__item-litle-block {
   .flexible ();
 }
 
+.additional-item__button {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  width: 280px;
+}
+
 .additional-item__info {
-  height: 289px;
-  width: 245px;
+  width: 280px;
+  height: 290px;
+  margin-top: 35px;
+  padding: 187px 59px 43px;
+  box-sizing: border-box;
   align-items: center;
-  background-image: url("../img/cat-aside.png");
+  text-align: center;
+  background-image: url("../img/cat_aside_mobile.png");
   background-size: 100%;
   background-position: center, center;
   background-repeat: no-repeat, no-repeat;
   position: relative;
-  margin-bottom: 89px;
+
+  @media (min-width: @tablet-width) {
+    height: 200px;
+    width: 708px;
+    padding: 0;
+    align-items: center;
+    background-image: url("../img/cat_aside_tablet.png");
+    background-size: 100%;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 289px;
+    width: 245px;
+    align-items: center;
+    background-image: url("../img/cat_aside.png");
+    background-size: 100%;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    position: relative;
+  }
 }
 
 .additional-item__info::after {
@@ -64,6 +129,8 @@
   font-family: @arial;
   color: #ffffff;
   position: relative;
+  font-size: 16px;
+  line-height: 16px;
   z-index: 10;
   margin: 0;
 }
