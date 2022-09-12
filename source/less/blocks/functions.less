@@ -2,11 +2,17 @@
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
+  margin: 20px 0 40px;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
+    margin: 45px 0 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 32px;
   }
 }
 
@@ -14,6 +20,26 @@
   @media (min-width: @tablet-width) {
     .flexible ();
     flex-wrap: wrap;
+    position: relative;
+  }
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -8px;
+      left: -30px;
+      width: 768px;
+      height: 1px;
+      background: #e6e6e6;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -21,8 +47,10 @@
   width: 280px;
   font-family: @arial;
   .flexible ();
+  margin-bottom: 20px;
+  position: relative;
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
     margin-bottom: 37px;
   }
 }
@@ -61,7 +89,7 @@
     font-family: @arial;
   }
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
     margin-left: 0;
   }
 }
@@ -75,5 +103,26 @@
     background-position: right;
     background-repeat: no-repeat;
     font-family: @arial;
+  }
+}
+
+.functions__text {
+  margin: 0 0 0 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 151px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 151px;
+    margin-left: 0;
+  }
+}
+
+.functions__img {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 40px;
+    left: 0;
   }
 }

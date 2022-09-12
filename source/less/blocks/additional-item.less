@@ -2,16 +2,76 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+  margin: 30px 0 49px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 17px;
+    width: 53px;
+    height: 2px;
+    background: #68b738;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin: 68px 0 80px 37px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -67px;
+      top: 22px;
+      width: 30px;
+      height: 2px;
+      background: #68b738;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -30px;
+      top: 22px;
+      width: 328px;
+      height: 2px;
+      background: #68b738;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 100px 0 92px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -110px;
+      top: 22px;
+      width: 70px;
+      height: 2px;
+      background: #68b738;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -110px;
+      top: 22px;
+      width: 957px;
+      height: 2px;
+      background: #68b738;
+    }
   }
 }
 
 .additional-item__block {
   @media (min-width: @desktop-width) {
     .flexible ();
+    margin-bottom: 181px;
   }
 }
 
@@ -19,17 +79,96 @@
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    box-sizing: border-box;
+    border: 1px solid #cdcdcd;
+    padding: 0 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 896px;
+    box-sizing: border-box;
+    border: none;
+    padding: 0;
+  }
 }
 
 .additional-item__item {
-  @media (min-width: @desktop-width) {
-    .flexible ();
+  position: relative;
+  margin-bottom: 30px;
+
+  &::before {
+    @media (max-width: @mobile-width-only) {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: -15px;
+      width: 280px;
+      left: 0;
+      height: 1px;
+      background: #cdcdcd;
+    }
+
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: -20px;
+      width: 895px;
+      left: 0;
+      height: 1px;
+      background: #cdcdcd;
+    }
+  }
+
+  &:not(:first-child)::after {
+    @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: -20px;
+      width: 707px;
+      left: -37px;
+      height: 1px;
+      background: #cdcdcd;
+    }
+  }
+
+  &:last-child::after {
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -20px;
+      width: 895px;
+      left: 0;
+      height: 1px;
+      background: #cdcdcd;
+    }
+  }
+
+  &:first-child {
+    @media (min-width: @tablet-width) {
+      margin-top: 15px;
+    }
+  }
+
+  &:last-child {
+    @media (min-width: @desktop-width) {
+      margin-bottom: 17px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 54px;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 500px 300px;
-    gap: 100px;
+    grid-template-columns: 650px 244px;
+    margin: 0 0 32px;
   }
 }
 
@@ -40,7 +179,7 @@
 
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 200px 200px;
+    grid-template-columns: 325px 325px;
   }
 }
 
@@ -49,10 +188,16 @@
   line-height: 16px;
   text-transform: uppercase;
   font-weight: 400;
+  margin: 12px 0 0;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    margin: 0 0 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }
 
@@ -64,6 +209,28 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
+    margin: 0 0 23px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+
+    &:last-child {
+      width: 82px;
+      text-align: left;
+    }
+  }
+
+  &:last-child {
+    width: 90px;
+    text-align: right;
+
+    @media (min-width: @desktop-width) {
+      &:last-child {
+        width: 82px;
+        text-align: left;
+      }
+    }
   }
 }
 
@@ -75,7 +242,21 @@
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   width: 280px;
+
+  @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
+    width: 632px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+    height: 40px;
+    border: none;
+    padding: 7px 26px;
+  }
 }
+
+// Пока оставил фоновые изображения как есть, потом исправлю, если что
 
 .additional-item__info {
   width: 280px;
@@ -87,8 +268,8 @@
   text-align: center;
   background-image: url("../img/cat_aside_mobile.png");
   background-size: 100%;
-  background-position: center, center;
-  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
 
   @media (min-width: @tablet-width) {
@@ -97,21 +278,14 @@
     padding: 0;
     align-items: center;
     background-image: url("../img/cat_aside_tablet.png");
-    background-size: 100%;
-    background-position: center, center;
-    background-repeat: no-repeat, no-repeat;
-    position: relative;
   }
 
   @media (min-width: @desktop-width) {
     height: 289px;
     width: 245px;
+    margin-top: 0;
     align-items: center;
     background-image: url("../img/cat_aside.png");
-    background-size: 100%;
-    background-position: center, center;
-    background-repeat: no-repeat, no-repeat;
-    position: relative;
   }
 }
 
@@ -130,7 +304,39 @@
   color: #ffffff;
   position: relative;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 20px;
   z-index: 10;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    position: absolute;
+    top: 71px;
+    left: 422px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    top: 171px;
+    left: 42px;
+  }
+}
+
+.additional-item__info-icon {
+  width: 78px;
+  height: 80px;
+  position: absolute;
+  z-index: 12;
+  top: 59px;
+  left: 101px;
+
+  @media (min-width: @tablet-width) {
+    top: 57px;
+    left: 77px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 56px;
+    left: 84px;
+  }
 }
