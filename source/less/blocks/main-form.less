@@ -1,6 +1,7 @@
 .main-form {
   padding-left: 20px;
   padding-right: 20px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding-left: 70px;
@@ -17,11 +18,34 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  margin: 27px 0 37px;
+  position: relative;
+
+  &::before {
+    @media (max-width: @mobile-width-only) {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: -25px;
+      width: 320px;
+      left: -20px;
+      height: 1px;
+      background: #d9d9d9;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
+    margin: 6px 0 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    margin: 0 0 56px;
   }
 }
 
@@ -29,10 +53,12 @@
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
+  margin: 0 0 39px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
     font-weight: 400;
+    margin: 0 0 66px;
   }
 }

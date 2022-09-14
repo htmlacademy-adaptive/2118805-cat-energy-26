@@ -7,7 +7,7 @@
 
   @media (min-width: @desktop-width) {
     .flexible ();
-    margin: 281px 0 0;
+    margin: 81px 0 0;
   }
 }
 
@@ -15,15 +15,22 @@
   width: 280px;
   height: 266px;
   background-color: @color;
+  box-sizing: border-box;
+  padding: 30px 33px 18px 20px;
+  margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     width: 708px;
     height: 372px;
+    padding: 77px 316px 57px 52px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
     width: 570px;
     height: 374px;
+    padding: 77px 51px 55px 52px;
+    margin-bottom: 71px;
   }
 }
 
@@ -32,18 +39,33 @@
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
+  margin: 0 auto 29px 71px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin: 0 auto 24px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0 auto 73px 162px;
   }
 }
 
 .fitchers__link {
   text-transform: uppercase;
+  text-decoration: none;
   font-size: 16px;
   line-height: 16px;
   position: relative;
+  margin-top: 38px;
+  color: #000000;
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -55,14 +77,83 @@
   font-family: @arial;
   font-size: 14px;
   line-height: 18px;
+  position: relative;
+  margin: 0 0 38px;
+
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -23px;
+      width: 240px;
+      left: 0;
+      height: 1px;
+      background: #d9d9d9;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    margin: 0 0 48px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 23px;
   }
 }
 
 .fitchers__link-arrow {
   position: absolute;
   margin-left: 15px;
+
+  @media (min-width: @tablet-width) {
+    top: 10px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.fitchers__link-arrow:hover {
+  margin-left: 15px;
+  width: 32px;
+  height: 12px;
+  transform: scaleX(1.2);
+}
+
+.fitchers__img-first {
+  background-image: url("../img/cat_fitchers.svg");
+  background-repeat: no-repeat;
+  background-position: 22px 24px;
+
+  @media (min-width: @tablet-width) {
+    background-position: 522px 124px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: 52px 47px;
+  }
+}
+
+.fitchers__img-second {
+  background-image: url("../img/cat_fitchers_go.svg");
+  background-repeat: no-repeat;
+  background-position: 13px 24px;
+
+  @media (min-width: @tablet-width) {
+    background-position: 522px 124px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: 52px 47px;
+  }
 }

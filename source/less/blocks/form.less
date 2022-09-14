@@ -16,17 +16,121 @@
   text-transform: uppercase;
   list-style: none;
   padding: 0;
-}
+  margin: 0;
 
-.form__pet-point {
-  border: 1px solid #e7e7e7;
-  list-style: none;
-  box-sizing: border-box;
-  padding: 0;
+  @media (min-width: @desktop-width) {
+    width: 570px;
+  }
 }
 
 .form__pet-point-list {
+  position: relative;
+  list-style: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 46px 0;
+  height: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: -22px;
+      width: 320px;
+      left: -20px;
+      height: 1px;
+      background: #d9d9d9;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -19px;
+      width: 320px;
+      left: -20px;
+      height: 1px;
+      background: #d9d9d9;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 28px;
+    border: 1px solid #e7e7e7;
+    height: 196px;
+    margin: 72px 0 71px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border: 1px solid #e7e7e7;
+    width: 568px;
+    height: 196px;
+    margin: 0;
+  }
+}
+
+.form__pet-point-slim-input,
+.form__pet-point-power-input,
+.form__pet-point-advice-input {
+  margin: 0 15px 0 0;
+}
+
+.form__pet-point-slim,
+.form__pet-point-power,
+.form__pet-point-advice {
+  margin: 0 15px 0 0;
+  position: relative;
+}
+
+.form__pet-point-item {
   text-transform: uppercase;
+}
+
+.form__pet-name,
+.form__pet-weight {
+  .flexible ();
+  margin-bottom: 14px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.form__pet-age {
+  margin-bottom: 27px;
+  .flexible ();
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.form__pet-weight-label {
+  width: 85px;
+
+  @media (min-width: @tablet-width) {
+    width: 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 105px;
+  }
+}
+
+.form__pet-age-label {
+  width: 165px;
+
+  @media (min-width: @tablet-width) {
+    width: 155px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 185px;
+  }
 }
 
 .form__pet-name-input,
@@ -34,24 +138,119 @@
 .form__pet-age-input {
   text-transform: uppercase;
   box-sizing: border-box;
+  margin-left: 13px;
+  height: 45px;
+  padding: 13px 15px;
+  color: #444444;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Oswald", sans-serif;
+  width: 100%;
+  border: 1px solid #e7e7e7;
+  border-radius: 0;
+  outline: none;
+
+  @media (min-width: @tablet-width) {
+    height: 52px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 11px 20px;
+  }
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    border: 2px solid #444444;
+    padding: 13px 14px;
+
+    @media (min-width: @tablet-width) {
+      padding: 11px 19px;
+    }
+  }
+
+  &::grammar-error {
+    border: 2px solid #ff8282;
+    padding: 13px 14px;
+
+    @media (min-width: @tablet-width) {
+      padding: 11px 19px;
+    }
+  }
 }
 
 .form__pet-owner-contacts {
+  position: relative;
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
+  margin: 0 0 35px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 15px;
+    width: 99px;
+    height: 2px;
+    background: #68b738;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
     font-weight: 400;
+    margin: 0 0 76px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -70px;
+      top: 20px;
+      width: 30px;
+      height: 2px;
+      background: #68b738;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -70px;
+      top: 20px;
+      width: 145px;
+      height: 2px;
+      background: #68b738;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 69px 0 76px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -110px;
+      top: 22px;
+      width: 70px;
+      height: 2px;
+      background: #68b738;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -110px;
+      top: 22px;
+      width: 778px;
+      height: 2px;
+      background: #68b738;
+    }
   }
 }
 
 .form__pet-owner-email,
-.form__pet-owner-phone,
-.form__pet-owner-email-input,
-.form__pet-owner-phone-input {
+.form__pet-owner-phone {
   box-sizing: border-box;
   font-size: 16px;
   line-height: 18px;
@@ -64,15 +263,130 @@
   }
 }
 
+.form__pet-owner-email {
+  width: 66px;
+
+  @media (min-width: @tablet-width) {
+    width: 76px;
+  }
+}
+
+.form__pet-owner-email-input,
+.form__pet-owner-phone-input {
+  position: relative;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  height: 45px;
+  padding: 13px 15px;
+  color: #444444;
+  font-family: "Oswald", sans-serif;
+  width: 100%;
+  border: 1px solid #e7e7e7;
+  border-radius: 0;
+  outline: none;
+  margin: 7px 0 7px 10px;
+
+  @media (min-width: @tablet-width) {
+    height: 52px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 11px 20px;
+  }
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    border: 2px solid #444444;
+    padding: 13px 14px;
+
+    @media (min-width: @tablet-width) {
+      padding: 11px 19px;
+    }
+  }
+
+  &::grammar-error {
+    border: 2px solid #ff8282;
+    padding: 13px 14px;
+
+    @media (min-width: @tablet-width) {
+      padding: 11px 19px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 0 17px;
+  }
+}
+
+.form__pet-mail-icon {
+  position: absolute;
+  right: 20px;
+  stroke: #222222;
+  z-index: -1;
+}
+
+.form__pet-phone-icon {
+  position: absolute;
+  right: 20px;
+  fill: #222222;
+  z-index: -1;
+}
+
+.form__pet-owner-email-input {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.form__pet-owner-phone-input {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.form__pet-owner-email-input:focus + .form__pet-mail-icon {
+  stroke: #68b738;
+}
+
+.form__pet-owner-phone-input:focus + .form__pet-phone-icon {
+  fill: #68b738;
+}
+
+.form__pet-owner-block {
+  .flexible ();
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+  }
+}
+
+.form__pet-owner-email-input--error:invalid + .form__pet-mail-icon {
+  border: 2px solid #ff8282;
+  stroke: #ff8282;
+}
+
+.form__pet-owner-phone-input--error:invalid + .form__pet-phone-icon {
+  border: 2px solid #ff8282;
+  fill: #ff8282;
+}
+
 .form__pet-comment-title {
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
+  margin: 16px 0 37px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
     font-weight: 400;
+    margin: 65px 0 76px;
   }
 }
 
@@ -81,6 +395,31 @@
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  height: 150px;
+  vertical-align: top;
+  text-align: start;
+  font-family: "Oswald", sans-serif;
+  border: 1px solid #e7e7e7;
+  resize: none;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    border: 2px solid #000000;
+    padding: 9px 14px;
+    outline: none;
+  }
+
+  &::grammar-error {
+    border: 2px solid #ff8282;
+    padding: 9px 14px;
+    outline: none;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -92,11 +431,13 @@
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
+  margin: 23px 0 34px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
     font-weight: 400;
+    margin: 65px 0 57px;
   }
 }
 
@@ -108,6 +449,7 @@
   font-weight: 400;
   text-transform: uppercase;
   padding: 0;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -121,25 +463,61 @@
   }
 }
 
-.form__pet-owner-block {
+.form__pet-owner-blocks {
   @media (min-width: @desktop-width) {
     .flexible ();
   }
 }
 
 .form__pet-add-list-item {
+  margin-bottom: 13px;
+
   @media (min-width: @tablet-width) {
     width: 221px;
+  }
+}
+
+.form__pet-add-sugar-input,
+.form__pet-add-water-input,
+.form__pet-add-milk-input,
+.form__pet-add-vitamins-input {
+  margin: 0 15px 0 0;
+}
+
+.form__pet-add-sugar,
+.form__pet-add-water,
+.form__pet-add-milk,
+.form__pet-add-vitamins {
+  position: relative;
+}
+
+.form__pet-add-button {
+  margin-top: 21px;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
+    width: 244px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    width: 568px;
+    height: 52px;
   }
 }
 
 .form__pet-add-wrapper {
   @media (min-width: @tablet-width) {
     .flexible();
+    margin-top: 49px;
+    justify-content: flex-start;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
+    .flexible();
+    margin-bottom: 177px;
     justify-content: flex-start;
   }
 }
@@ -147,4 +525,108 @@
 .form__add-info {
   font-family: @arial;
   line-height: 16px;
+  text-align: center;
+  margin: 21px 0 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 81px;
+  }
+}
+
+.form__pet-control-mark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 0;
+  border: 1px solid #cdcdcd;
+  background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    top: 2px;
+  }
+}
+
+.form__pet-checkbox-size[type="checkbox"]:hover + .form__pet-control-mark {
+  border: 1px solid #bababa;
+  cursor: pointer;
+}
+
+.form__pet-checkbox-size[type="checkbox"]:focus + .form__pet-control-mark {
+  border: 1px solid #000000;
+}
+
+.form__pet-checkbox-size[type="checkbox"]:checked + .form__pet-control-mark {
+  background-image: url("../img/tick.svg");
+  background-position: 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.form__pet-checkbox-size[type="checkbox"]:disabled + .form__pet-control-mark {
+  opacity: 0.3;
+}
+
+.form__pet-checkbox-size {
+  width: 30px;
+  height: 30px;
+  border-radius: 0;
+  box-sizing: border-box;
+  vertical-align: middle;
+  background-color: #ffffff;
+  outline: none;
+  position: relative;
+}
+
+.form__pet-radio-pick-size {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  margin: 0 2px 2px 1px;
+  outline: none;
+}
+
+.form__pet-control-radio-mark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+  background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    top: 2px;
+  }
+}
+
+.form__pet-radio-pick-size[type="radio"]:hover + .form__pet-control-radio-mark {
+  border: 1px solid #bababa;
+  cursor: pointer;
+}
+
+.form__pet-radio-pick-size[type="radio"]:focus + .form__pet-control-radio-mark {
+  border: 1px solid #000000;
+}
+
+.form__pet-radio-pick-size[type="radio"]:checked + .form__pet-control-radio-mark {
+  background-image: url("../img/radio_point.svg");
+  background-position: 7px 7px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.form__pet-radio-text {
+  margin-left: 15px;
+}
+
+.form__pet-radio-text:disabled {
+  color: rgba(0, 0, 0, 0.3);
 }
