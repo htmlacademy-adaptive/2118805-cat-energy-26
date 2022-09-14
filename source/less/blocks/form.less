@@ -327,12 +327,22 @@
   position: absolute;
   right: 20px;
   stroke: #222222;
+  z-index: -1;
 }
 
 .form__pet-phone-icon {
   position: absolute;
   right: 20px;
   fill: #222222;
+  z-index: -1;
+}
+
+.form__pet-owner-email-input {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.form__pet-owner-phone-input {
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .form__pet-owner-email-input:focus + .form__pet-mail-icon {
@@ -393,6 +403,23 @@
   text-align: start;
   font-family: "Oswald", sans-serif;
   border: 1px solid #e7e7e7;
+  resize: none;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    border: 2px solid #000000;
+    padding: 9px 14px;
+    outline: none;
+  }
+
+  &::grammar-error {
+    border: 2px solid #ff8282;
+    padding: 9px 14px;
+    outline: none;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -527,6 +554,11 @@
 
 .form__pet-checkbox-size[type="checkbox"]:hover + .form__pet-control-mark {
   border: 1px solid #bababa;
+  cursor: pointer;
+}
+
+.form__pet-checkbox-size[type="checkbox"]:focus + .form__pet-control-mark {
+  border: 1px solid #000000;
 }
 
 .form__pet-checkbox-size[type="checkbox"]:checked + .form__pet-control-mark {
@@ -577,6 +609,11 @@
 
 .form__pet-radio-pick-size[type="radio"]:hover + .form__pet-control-radio-mark {
   border: 1px solid #bababa;
+  cursor: pointer;
+}
+
+.form__pet-radio-pick-size[type="radio"]:focus + .form__pet-control-radio-mark {
+  border: 1px solid #000000;
 }
 
 .form__pet-radio-pick-size[type="radio"]:checked + .form__pet-control-radio-mark {
