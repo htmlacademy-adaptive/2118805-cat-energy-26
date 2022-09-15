@@ -5,7 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>«Кэт энерджи»</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body>
@@ -13,10 +18,14 @@
     <div class="header__container">
       <div class="header__preview">
         <a class="header__logo" href="index.html">
-          <img class="header__preview-img" src="img/logo_mobile_icon.svg" alt="Кэт энерджи логотип">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo_desktop_icon.svg">
+            <source media="(min-width: 768px)" srcset="img/logo_tablet_icon.svg">
+            <img class="header__preview-img" src="img/logo_mobile_icon.svg" alt="Кэт энерджи логотип">
+          </picture>
         </a>
         <a class="header__logo-text" href="index.html">
-          <img class="header__preview-img-text" src="img/logo_mobile_text.svg" alt="Кэт энерджи логотип">
+          <img class="header__preview-img-text" src="img/logo_text.svg" alt="Кэт энерджи логотип">
         </a>
       </div>
       <nav class="nav nav--closed nav--nojs">
