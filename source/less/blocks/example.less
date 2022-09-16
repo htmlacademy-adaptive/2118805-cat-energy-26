@@ -301,10 +301,33 @@
 
   &:hover {
     fill: #68b738;
+    stroke: #68b738;
   }
 
   &:active {
     fill: #5eaa2f;
+    stroke: #68b738;
+    opacity: 0.6;
+  }
+
+  @media (min-width: @tablet-width) {
+    left: 260px;
+  }
+}
+
+.example__toggle-big {
+  position: absolute;
+  left: 120px;
+  fill: #666666;
+
+  &:hover {
+    fill: #5eaa2f;
+    stroke: #68b738;
+  }
+
+  &:active {
+    fill: #5eaa2f;
+    stroke: #68b738;
     opacity: 0.6;
   }
 
@@ -322,7 +345,7 @@
   }
 
   &:active {
-    stroke: #5eaa2f;
+    stroke: #68b738;
     opacity: 0.6;
   }
 }

@@ -21,7 +21,7 @@
 .slogan__bcgd-image {
   width: 320px;
   height: 302px;
-  background-image: url("../img/cat_bcgd_mobile.png");
+  background-image: url("../img/cat_bcgd_mobile.webp");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,19 +29,20 @@
   top: 0;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/cat_bcgd_mobile@2x.png");
+    background-image: url("../img/cat_bcgd_mobile@2x.webp");
     background-size: 320px auto;
   }
 
   @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
     width: auto;
     height: auto;
+    display: none;
   }
 
   @media (min-width: @desktop-width) {
     width: 720px;
     height: 694px;
-    background-image: url("../img/cat_bcgd.png");
+    background-image: url("../img/cat_bcgd.webp");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -50,7 +51,7 @@
     left: 610px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/cat_bcgd@2x.png");
+      background-image: url("../img/cat_bcgd@2x.webp");
       background-size: 720px auto;
     }
   }
