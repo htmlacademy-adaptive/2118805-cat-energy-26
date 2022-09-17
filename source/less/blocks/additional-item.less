@@ -272,12 +272,22 @@
   background-repeat: no-repeat;
   position: relative;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/cat_aside_mobile@2x.png");
+    background-size: 280px auto;
+  }
+
   @media (min-width: @tablet-width) {
     height: 200px;
     width: 708px;
     padding: 0;
     align-items: center;
     background-image: url("../img/cat_aside_tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/cat_aside_tablet@2x.png");
+      background-size: 708px auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -286,6 +296,11 @@
     margin-top: 0;
     align-items: center;
     background-image: url("../img/cat_aside.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/cat_aside@2x.png");
+      background-size: 245px auto;
+    }
   }
 }
 

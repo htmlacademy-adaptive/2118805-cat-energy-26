@@ -221,20 +221,76 @@
   }
 }
 
-.example__img {
+.example__container {
   width: 280px;
   height: 256px;
+  .flexible ();
 
   @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
     position: absolute;
-    right: 200px;
+    left: 100px;
     top: 300px;
+    width: 560px;
+    height: 512px;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
     right: 200px;
-    top: -120px;
+    top: -130px;
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.example__img {
+  height: 100%;
+  width: 100%;
+}
+
+.example__img-back {
+  background-image: url("../img/slide_before.png");
+  background-repeat: no-repeat;
+  width: 50%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/slide_before@2x.png");
+    background-size: 280px auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/slide_before_big.png");
+    background-repeat: no-repeat;
+    background-size: 560px auto;
+    width: 50%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/slide_before_big@2x.png");
+      background-size: 560px auto;
+    }
+  }
+}
+
+.example__img-front {
+  background-image: url("../img/slide_after.png");
+  background-position: right;
+  width: 50%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/slide_after@2x.png");
+    background-size: 280px auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/slide_after_big.png");
+    background-repeat: no-repeat;
+    background-size: 560px auto;
+    width: 50%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/slide_after_big@2x.png");
+      background-size: 560px auto;
+    }
   }
 }
 
@@ -243,23 +299,40 @@
   left: 120px;
   fill: #666666;
 
-  @media (min-width: @tablet-width) {
-    left: 350px;
-    top: 300px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 1080px;
-    top: -120px;
-  }
-
   &:hover {
     fill: #68b738;
+    stroke: #68b738;
   }
 
   &:active {
     fill: #5eaa2f;
+    stroke: #68b738;
     opacity: 0.6;
+  }
+
+  @media (min-width: @tablet-width) {
+    left: 260px;
+  }
+}
+
+.example__toggle-big {
+  position: absolute;
+  left: 120px;
+  fill: #666666;
+
+  &:hover {
+    fill: #5eaa2f;
+    stroke: #68b738;
+  }
+
+  &:active {
+    fill: #5eaa2f;
+    stroke: #68b738;
+    opacity: 0.6;
+  }
+
+  @media (min-width: @tablet-width) {
+    left: 260px;
   }
 }
 
@@ -272,7 +345,7 @@
   }
 
   &:active {
-    stroke: #5eaa2f;
+    stroke: #68b738;
     opacity: 0.6;
   }
 }
