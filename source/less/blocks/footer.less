@@ -7,8 +7,10 @@
     height: 236px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 39px 0 22px;
+    box-sizing: border-box;
   }
 
   @media (min-width: @tablet-width) {
@@ -24,7 +26,7 @@
     width: 1440px;
     height: 149px;
     box-sizing: border-box;
-    padding: 57px 110px 58px;
+    padding: 60px 110px 55px;
   }
 }
 
@@ -35,6 +37,12 @@
 
   @media (min-width: @tablet-width) {
     width: 163px;
+    margin-bottom: 4px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 163px;
+    margin-bottom: 2px;
   }
 }
 
@@ -69,7 +77,44 @@
 
 .footer__social {
   .flexible ();
-  width: 132px;
+  min-width: 124px;
+  position: relative;
+
+  &::before {
+    @media (max-width: @mobile-width-only) {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: -13px;
+      left: -75px;
+      width: 280px;
+      height: 1px;
+      background: #d9d9d9;
+    }
+  }
+
+  &::after {
+    @media (max-width: @mobile-width-only) {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -19px;
+      left: -75px;
+      width: 280px;
+      height: 1px;
+      background: #d9d9d9;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 20px;
+    min-width: 130px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 25px;
+    margin-bottom: 5px;
+  }
 }
 
 .footer__logo-cat {
@@ -90,6 +135,8 @@
 .footer__social-tg {
   cursor: pointer;
   fill: #666666;
+  margin-top: 10px;
+  margin-left: -3px;
 
   &:hover,
   &:focus {
@@ -100,5 +147,32 @@
   &:active {
     fill: #68b738;
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+.footer__social-vk {
+  @media (min-width: @tablet-width) {
+    margin-right: 5px;
+    margin-left: 3px;
+  }
+}
+
+.footer__social-youtube {
+  margin-left: -7px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 5px;
+    margin-left: 3px;
+  }
+}
+
+.footer__social-tg {
+  @media (min-width: @tablet-width) {
+    margin-left: 10px;
   }
 }
