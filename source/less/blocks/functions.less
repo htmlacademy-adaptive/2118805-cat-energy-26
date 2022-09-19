@@ -2,7 +2,7 @@
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
-  margin: 20px 0 40px;
+  margin: 18px 0 39px;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
@@ -21,6 +21,7 @@
     .flexible ();
     flex-wrap: wrap;
     position: relative;
+    counter-reset: program-counter;
   }
 
   &::after {
@@ -50,18 +51,31 @@
   margin-bottom: 20px;
   position: relative;
 
-  @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
+  @media (min-width: @tablet-width) {
     margin-bottom: 37px;
+
+    &::after {
+      font-family: "Oswald", sans-serif;
+      width: 134px;
+      content: counter(program-counter);
+      position: absolute;
+      font-size: 280px;
+      color: #f2f2f2;
+      z-index: -1;
+      right: 0;
+      counter-increment: program-counter;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 15px;
   }
 }
 
 .functions__eco {
   @media (min-width: @tablet-width) {
     height: 280px;
-    width: 230px;
-    background-image: url("../img/1.svg");
-    background-position: right;
-    background-repeat: no-repeat;
+    width: 252px;
     font-family: @arial;
   }
 }
@@ -69,23 +83,22 @@
 .functions__dust {
   @media (min-width: @tablet-width) {
     height: 280px;
-    width: 246px;
-    margin-left: 90px;
-    background-image: url("../img/2.svg");
-    background-position: right;
-    background-repeat: no-repeat;
+    width: 245px;
+    margin-right: 80px;
     font-family: @arial;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 70px;
+    margin-right: 0;
   }
 }
 
 .functions__food {
   @media (min-width: @tablet-width) {
     height: 280px;
-    width: 248px;
+    width: 245px;
     margin-left: 79px;
-    background-image: url("../img/3.svg");
-    background-position: right;
-    background-repeat: no-repeat;
     font-family: @arial;
   }
 
@@ -98,11 +111,14 @@
   @media (min-width: @tablet-width) {
     height: 280px;
     width: 250px;
-    margin-left: 77px;
-    background-image: url("../img/4.svg");
-    background-position: right;
-    background-repeat: no-repeat;
+    margin-right: 75px;
     font-family: @arial;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+    margin-right: 0;
+    width: 245px;
   }
 }
 
@@ -110,12 +126,18 @@
   margin: 0 0 0 20px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 151px;
+    margin-top: 95px;
+    margin-left: 0;
   }
 
-  @media (min-width: @tablet-width) {
-    margin-top: 151px;
-    margin-left: 0;
+  @media (min-width: @desktop-width) {
+    margin-top: 95px;
+  }
+}
+
+.functions__text-br {
+  @media (max-width: @tablet-width) {
+    display: none;
   }
 }
 

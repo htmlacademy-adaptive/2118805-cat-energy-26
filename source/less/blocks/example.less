@@ -3,7 +3,7 @@
   width: 320px;
   box-sizing: border-box;
   margin: 49px -20px 0;
-  padding: 25px 20px;
+  padding: 25px 20px 40px 20px;
 
   @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
     width: 708px;
@@ -28,12 +28,8 @@
     position: relative;
     left: -110px;
     box-sizing: border-box;
-    padding: 70px 110px 75px;
+    padding: 70px 110px 53px;
     width: 1440px;
-  }
-
-  @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
-    position: relative;
   }
 }
 
@@ -46,20 +42,26 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin: 53px 0 63px;
+    margin: 51px 0 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 53px 0 77px;
   }
 }
 
 .example__text {
   font-family: @arial;
-  margin: 0 0 54px;
+  margin: 0 0 19px;
 
   @media (min-width: @tablet-width) {
     width: 700px;
+    margin: 0 0 53px;
   }
 
   @media (min-width: @desktop-width) {
     width: 436px;
+    margin: 0 0 68px;
   }
 }
 
@@ -101,7 +103,7 @@
   content: "";
   position: absolute;
   width: 122px;
-  height: 56px;
+  height: 54px;
   top: 0;
   left: 155px;
   border: 1px solid #cdcdcd;
@@ -120,11 +122,14 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
+    justify-content: space-between;
+    min-height: 49px;
+    margin-bottom: 7px;
   }
 
   @media (min-width: @desktop-width) {
     .flexible ();
-    margin-top: 55px;
+    margin-top: 40px;
     flex-direction: row;
     width: 327px;
   }
@@ -134,12 +139,13 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
-  margin: 20px 0 7px 20px;
+  margin: 15px 0 7px 22px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 37px;
+    margin: 15px 0 12px 27px;
   }
 }
 
@@ -148,7 +154,7 @@
   position: relative;
   font-size: 12px;
   line-height: 12px;
-  margin: 0 auto 0 20px;
+  margin: 0 auto 0 17px;
   width: 87px;
   box-sizing: border-box;
   padding: 0 5px;
@@ -161,7 +167,7 @@
     line-height: 14px;
     background-color: #ffffff;
     width: 114px;
-    margin-left: 25px;
+    margin-left: 24px;
   }
 
   @media (min-width: @desktop-width) {
@@ -170,11 +176,17 @@
 }
 
 .example__days .example__wraper-title {
-  margin: 20px 30px 7px 15px;
+  margin: 15px 23px 7px 25px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+    margin: 15px 30px 12px 15px;
+  }
 }
 
 .example__days .example__desc {
-  margin: 0 0 0 20px;
+  margin: 0 0 0 23px;
 
   @media (min-width: @tablet-width) {
     font-size: 14px;
@@ -194,7 +206,7 @@
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 400;
-  margin: 20px 0;
+  margin: 20px 0 20px 3px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -211,7 +223,7 @@
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
-  margin: 20px 0;
+  margin: 20px 3px 20px 6px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -228,7 +240,7 @@
 
   @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
     position: absolute;
-    left: 100px;
+    left: 75px;
     top: 300px;
     width: 560px;
     height: 512px;
@@ -236,8 +248,8 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    right: 200px;
-    top: -130px;
+    right: 110px;
+    top: -135px;
     width: 560px;
     height: 512px;
   }
@@ -358,7 +370,7 @@
     display: block;
     width: 768px;
     height: 462px;
-    margin-top: 250px;
+    margin-top: 248px;
     background-color: #eaeaea;
   }
 }

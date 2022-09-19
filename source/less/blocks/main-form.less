@@ -18,7 +18,7 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
-  margin: 27px 0 37px;
+  margin: 27px 0 37px 0;
   position: relative;
 
   &::before {
@@ -26,10 +26,11 @@
       content: "";
       position: absolute;
       right: 0;
-      top: -25px;
+      top: -29px;
       width: 320px;
       left: -20px;
       height: 1px;
+      z-index: 9;
       background: #d9d9d9;
     }
   }
@@ -38,7 +39,7 @@
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
-    margin: 6px 0 54px;
+    margin: 0 0 54px;
   }
 
   @media (min-width: @desktop-width) {

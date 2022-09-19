@@ -7,14 +7,14 @@
   position: relative;
   width: 280px;
   height: 190px;
-  margin-bottom: 21px;
+  margin-bottom: 19px;
 
   &::after {
     @media (max-width: @mobile-width-only) {
       content: "";
       position: absolute;
       right: 0;
-      bottom: -15px;
+      bottom: -10px;
       width: 320px;
       left: -20px;
       height: 1px;
@@ -29,7 +29,7 @@
     width: 324px;
     height: 430px;
     background-color: @color;
-    padding: 160px 36px 39px;
+    padding: 162px 37px 39px;
   }
 
   @media (min-width: @desktop-width) {
@@ -39,7 +39,7 @@
     width: 245px;
     height: 431px;
     background-color: @color;
-    padding: 160px 37px 39px;
+    padding: 166px 40px 39px;
   }
 }
 
@@ -69,13 +69,18 @@
     justify-content: center;
     margin-bottom: 21px;
   }
+
+  @media (min-width: @desktop-width) {
+    justify-content: center;
+    margin-bottom: 25px;
+  }
 }
 
 .catalog-item__list-item:nth-child(2n),
 .catalog-item__list-item:nth-child(3) {
   @media (min-width: @tablet-width) {
     position: relative;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
 
   &::after {
@@ -127,25 +132,28 @@
   line-height: 20px;
   width: 280px;
   box-sizing: border-box;
-  margin: 12px 0 0;
+  margin: 22px 0 0;
 
   @media (min-width: @tablet-width) {
     width: 248px;
+    height: 40px;
+    padding: 10px 19px;
+    margin: 25px 0 0;
   }
 
   @media (min-width: @desktop-width) {
     width: 168px;
-    margin-top: 28px;
+    margin-top: 25px;
   }
 }
 
 .catalog-item__add {
-  padding: 76px 0 14px;
+  padding: 70px 0 14px;
 
   @media (min-width: @tablet-width) {
     background-color: #ffffff;
     border: 2px solid #f2f2f2;
-    padding: 158px 0 36px;
+    padding: 156px 0 36px;
     box-sizing: border-box;
   }
 }
@@ -154,18 +162,30 @@
   position: absolute;
   background-color: #ffffff;
   border: none;
-  top: 20px;
-  left: 125px;
+  top: 15px;
+  left: 120px;
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
-    top: 52px;
-    left: 147px;
+    top: 50px;
+    left: 125px;
+    width: 60px;
+    height: 60px;
   }
 
   @media (min-width: @desktop-width) {
     top: 51px;
-    left: 107px;
+    left: 82px;
+  }
+}
+
+.catalog-item__add-button-size {
+  stroke-width: 2px;
+
+  @media (min-width: @tablet-width) {
+    width: 60px;
+    height: 60px;
+    stroke-width: 1px;
   }
 }
 
@@ -174,7 +194,7 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
-  margin-top: 16px;
+  margin-top: 20px;
   width: 280px;
   box-sizing: border-box;
   background-color: #f2f2f2;
@@ -182,6 +202,8 @@
 
   @media (min-width: @tablet-width) {
     width: 248px;
+    height: 40px;
+    padding: 10px 19px;
   }
 
   @media (min-width: @desktop-width) {
@@ -212,13 +234,15 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    line-height: 21px;
+    line-height: 24px;
     text-align: center;
     width: 154px;
+    margin: 0 0 0 4px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
+    line-height: 20px;
   }
 }
 
@@ -268,8 +292,8 @@
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
-    line-height: 16px;
-    margin: 15px 0 69px;
+    line-height: 18px;
+    margin: 25px 0 65px;
     width: 167px;
   }
 
@@ -281,11 +305,11 @@
 .catalog-item__img1 {
   position: absolute;
   top: 25px;
-  left: 36px;
+  left: 30px;
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: -45px;
+    top: -44px;
     left: 82px;
     width: 161px;
     height: auto;
@@ -300,15 +324,15 @@
 
 .catalog-item__img2 {
   position: absolute;
-  top: 25px;
+  top: 22px;
   left: 28px;
 
   @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
     position: absolute;
     top: -73px;
     left: 78px;
-    width: auto;
-    height: auto;
+    width: 168px;
+    height: 207px;
   }
 
   @media (min-width: @desktop-width) {
@@ -322,7 +346,7 @@
 
 .catalog-item__img3 {
   position: absolute;
-  top: 25px;
+  top: 35px;
   left: 36px;
 
   @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
@@ -344,15 +368,15 @@
 
 .catalog-item__img4 {
   position: absolute;
-  top: 25px;
+  top: 22px;
   left: 28px;
 
   @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
     position: absolute;
     top: -73px;
     left: 78px;
-    width: auto;
-    height: auto;
+    width: 167px;
+    height: 200px;
   }
 
   @media (min-width: @desktop-width) {
@@ -366,12 +390,12 @@
 
 .catalog-item__img5 {
   position: absolute;
-  top: 25px;
-  left: 36px;
+  top: 41px;
+  left: 34px;
 
   @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
     position: absolute;
-    top: -44px;
+    top: -43px;
     left: 82px;
     width: auto;
     height: auto;
@@ -388,15 +412,15 @@
 
 .catalog-item__img6 {
   position: absolute;
-  top: 25px;
+  top: 22px;
   left: 28px;
 
   @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
     position: absolute;
-    top: -73px;
+    top: -72px;
     left: 78px;
-    width: auto;
-    height: auto;
+    width: 168px;
+    height: 200px;
   }
 
   @media (min-width: @desktop-width) {
@@ -410,10 +434,8 @@
 
 .catalog-item__img7 {
   position: absolute;
-  top: 25px;
-  left: 36px;
-  width: 68px;
-  height: auto;
+  top: 35px;
+  left: 30px;
 
   @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
     position: absolute;
