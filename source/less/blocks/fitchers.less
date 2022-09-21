@@ -120,7 +120,7 @@
     margin-left: 27px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     top: 9px;
     margin-left: 29px;
   }
@@ -131,10 +131,20 @@
 }
 
 .fitchers__link-arrow:hover {
-  margin-left: 15px;
+  margin-left: 13px;
   width: 32px;
   height: 12px;
   transform: scaleX(1.2);
+
+  @media (min-width: @tablet-width) {
+    margin-left: 24px;
+    transform: scaleX(1.2);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 28px;
+    transform: scaleX(1.2);
+  }
 }
 
 .fitchers__img-first {
@@ -165,7 +175,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    background-position: 32px 30px;
-    background-size: 135px 135px;
+    background-position: 32px 50px;
+    background-size: 135px 100px;
   }
 }
