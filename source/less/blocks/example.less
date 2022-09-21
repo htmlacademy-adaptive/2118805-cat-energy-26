@@ -309,6 +309,7 @@
 .example__toggle {
   position: absolute;
   left: 120px;
+  display: block;
   fill: #666666;
 
   &:hover {
@@ -327,10 +328,17 @@
   }
 }
 
+@media (min-width: 768px) {
+  .example__toggle {
+    display: none;
+  }
+}
+
 .example__toggle-big {
   position: absolute;
   left: 120px;
   fill: #666666;
+  display: none;
 
   &:hover {
     fill: #5eaa2f;
@@ -345,6 +353,13 @@
 
   @media (min-width: @tablet-width) {
     left: 260px;
+  }
+}
+
+@media (min-width: 768px) {
+  .example__toggle-big {
+    display: block;
+    color: #666666;
   }
 }
 
