@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>«Кэт энерджи»</title>
-  <meta name="description" content="Кот лежит, заплывши жиром, встать с подстилки уж не может, закажи наш суперкорм вмиг жирдяю он поможет" />
+  <meta name="description"
+    content="Кот лежит, заплывши жиром, встать с подстилки уж не может, закажи наш суперкорм вмиг жирдяю он поможет" />
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
@@ -18,7 +19,7 @@
   <header class="header header--nojs">
     <div class="header__container">
       <div class="header__preview">
-        <a class="header__logo" href="index.html">
+        <a class="header__logo" title="На главную страницу." href="index.html">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo_desktop_icon.svg">
             <source media="(min-width: 768px)" srcset="img/logo_tablet_icon.svg">
@@ -26,207 +27,226 @@
           </picture>
         </a>
         <a class="header__logo-text" href="index.html">
-          <img class="header__preview-img-text" src="img/logo_text.svg" width="118" height="21" alt="Кэт энерджи логотип">
+          <img class="header__preview-img-text" src="img/logo_text.svg" alt="Кэт энерджи логотип">
         </a>
       </div>
-      <nav class="nav nav--closed nav--nojs">
+      <nav class="nav nav--closed">
         <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть
             меню</span></button>
         <div class="nav__wrapper">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link" href="index.html">Главная</a>
+              <a class="nav__link" title="На главную страницу." href="index.html">Главная</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="catalog.html">Каталог продукции</a>
+              <a class="nav__link" title="На страницу каталога." href="catalog.html">Каталог продукции</a>
             </li>
             <li class="nav__item nav__item--current">
-              <a class="nav__link" href="form.html">Подбор программы</a>
+              <a class="nav__link" title="На страницу формы." href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
       </nav>
     </div>
   </header>
-  <main class="main-form">
-    <h1 class="main-form__title">Подбор программы</h1>
-    <p class="main-form__title-slogan">Заполните анкету, и мы подберем <br>
-      программу питания для вашего кота</p>
-    <div class="main-form__container form">
-      <div class="form__pet">
-        <h2 class="visually-hidden">Данные кота</h2>
-        <ul class="form__pet-list">
-          <li class="form__pet-name">
-            <label class="form__pet-name-label" for="form__pet-name-input">имя:*</label>
-            <input class="form__pet-name-input" type="text" id="form__pet-name-input" placeholder="барсик">
-          </li>
-          <li class="form__pet-weight">
-            <label class="form__pet-weight-label" for="form__pet-weight-input">вес (кг):*</label>
-            <input class="form__pet-weight-input" type="text" id="form__pet-weight-input" placeholder="7">
-          </li>
-          <li class="form__pet-age">
-            <label class="form__pet-age-label" for="form__pet-age-input">Возраст (лет):</label>
-            <input class="form__pet-age-input" type="text" id="form__pet-age-input" placeholder="7">
-          </li>
-        </ul>
-        <ul class="form__pet-point-list">
-          <li class="form__pet-point-item">
-            <label class="form__pet-point-slim" for="form__pet-point-slim-input">
-              <input class="form__pet-point-slim-input form__pet-radio-pick-size" type="radio"
-                id="form__pet-point-slim-input" checked name="radio-button"><span
-                class="form__pet-control-radio-mark"></span>
-              <span class="form__pet-radio-text">похудение</span></label>
-          </li>
-          <li class="form__pet-point-item">
-            <label class="form__pet-point-power" for="form__pet-point-power-input">
-              <input class="form__pet-point-power-input form__pet-radio-pick-size" type="radio"
-                id="form__pet-point-power-input" name="radio-button"><span class="form__pet-control-radio-mark"></span>
-              <span class="form__pet-radio-text">Набор массы</span></label>
-          </li>
-          <li class="form__pet-point-item">
-            <label class="form__pet-point-advice" for="form__pet-point-advice-input">
-              <input class="form__pet-point-advice-input form__pet-radio-pick-size" type="radio"
-                id="form__pet-point-advice-input" name="radio-button"><span class="form__pet-control-radio-mark"></span>
-              <span class="form__pet-radio-text">Не знаю (Нужен ваш совет)</span></label>
-          </li>
-        </ul>
-      </div>
-      <div class="form__pet-owner">
-        <h2 class="form__pet-owner-contacts">Контактные данные (владельца кота)</h2>
-        <div class="form__pet-owner-blocks">
-          <div class="form__pet-owner-block">
-            <label class="form__pet-owner-email"
-              for="form__pet-owner-email-input form__pet-owner-email-input--error">E-mail:*</label>
-            <input class="form__pet-owner-email-input" type="text" id="form__pet-owner-email-input"
-              placeholder="кuklachev@gmail.com">
-            <svg class="form__pet-mail-icon" width="19" height="14" viewBox="0 0 19 14" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <line x1="1.18955" y1="6" x2="1.18955" y2="14" stroke-width="1.3" />
-              <line x1="18.1896" y1="6" x2="18.1896" y2="14" stroke-width="1.3" />
-              <line x1="0.539551" y1="13.35" x2="18.5396" y2="13.35" stroke-width="1.3" />
-              <line x1="0.539551" y1="1.35" x2="18.5396" y2="1.35" stroke-width="1.3" />
-              <path
-                d="M17.8896 3.1821L9.53957 9.67654L1.18955 3.18209V1.65H4.03955L9.53957 1.65H14.5396H17.8896V3.1821Z"
-                stroke-width="1.3" />
-            </svg>
-          </div>
-          <div class="form__pet-owner-block">
-            <label class="form__pet-owner-phone"
-              for="form__pet-owner-phone-input form__pet-owner-phone-input-error">Телефон:*</label>
-            <input class="form__pet-owner-phone-input" type="text" id="form__pet-owner-phone-input"
-              placeholder="8 (960) 900-60-90">
-            <svg class="form__pet-phone-icon" width="20" height="20" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_2403_1625)">
-                <path
-                  d="M17.7561 9.4H9.61816V10.6H17.7561L15.7455 12.7L16.6072 13.6L19.5752 10.5C19.6684 10.3702 19.7188 10.2123 19.7188 10.05C19.7188 9.88772 19.6684 9.72982 19.5752 9.6L16.6072 6.5L15.7455 7.4L17.7561 9.4Z" />
-                <path
-                  d="M8.37362 19.4V13.2C8.36256 13.0447 8.29849 12.8987 8.19306 12.7886C8.08763 12.6785 7.94786 12.6116 7.79917 12.6H3.5866C3.59153 12.9167 3.71415 13.2189 3.92855 13.4428C4.14295 13.6668 4.43232 13.7949 4.73548 13.8H7.12899V18.8H3.5866C3.35992 18.8149 3.13268 18.7825 2.91809 18.7048C2.70349 18.6271 2.50582 18.5057 2.33656 18.3475C2.1673 18.1893 2.02983 17.9976 1.93215 17.7834C1.83446 17.5693 1.7785 17.337 1.76753 17.1V3.10001C1.75968 2.6373 1.92564 2.18977 2.22987 1.85331C2.5341 1.51686 2.95238 1.31824 3.39512 1.30001H7.12899V6.30001H4.83122C4.52806 6.30516 4.23869 6.43324 4.02429 6.65718C3.80989 6.88112 3.68727 7.18336 3.68234 7.50001H7.89491C8.0436 7.48846 8.18337 7.42154 8.2888 7.31142C8.39423 7.2013 8.4583 7.05531 8.46936 6.90001V0.600012C8.42369 0.443872 8.33642 0.304534 8.21775 0.198285C8.09907 0.0920352 7.95389 0.0232649 7.79917 1.23734e-05H3.5866C3.20936 -0.0133408 2.8333 0.0511002 2.47993 0.189651C2.12655 0.328202 1.80279 0.538145 1.52714 0.807477C1.2515 1.07681 1.02939 1.40025 0.8735 1.7593C0.717613 2.11835 0.631012 2.50598 0.618647 2.90001V16.8C0.590902 17.1977 0.642233 17.597 0.769411 17.9729C0.89659 18.3489 1.09686 18.6932 1.35764 18.9844C1.61841 19.2756 1.93405 19.5072 2.28469 19.6648C2.63534 19.8224 3.0134 19.9024 3.39512 19.9H7.79917C7.86953 19.915 7.94222 19.9133 8.01186 19.895C8.0815 19.8767 8.1463 19.8423 8.20147 19.7942C8.25664 19.7462 8.30075 19.6859 8.33055 19.6176C8.36035 19.5494 8.37507 19.475 8.37362 19.4Z" />
-              </g>
-              <defs>
-                <clipPath id="clip0_2403_1625">
-                  <rect width="19.1481" height="20" transform=" translate(0.618652)" />
-                </clipPath>
-              </defs>
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div class="form__pet-comment">
-        <h2 class="form__pet-comment-title">Комментарий</h2>
-        <div>
-          <label class="form__pet-comment-text" for="form__pet-comment-text-input"></label>
-          <textarea class="form__pet-comment-text-input" type="text" id="form__pet-comment-text-input"
-            placeholder="Расскажите обо всех повадках кота"></textarea>
-        </div>
-      </div>
-      <div class="form__pet-add">
-        <h2 class="form__pet-add-title">Дополнительно</h2>
-        <div>
-          <ul class="form__pet-add-list">
-            <li class="form__pet-add-list-item">
-              <label class="form__pet-add-sugar" for="form__pet-add-sugar-input">
-                <input class="form__pet-add-sugar-input form__pet-checkbox-size" type="checkbox"
-                  id="form__pet-add-sugar-input" checked><span class="form__pet-control-mark"></span>
-                <span class="form__pet-checkbox-text">сахарозаменитель</span></label>
+  <main>
+    <div class="main-form">
+      <h1 class="main-form__title">Подбор программы</h1>
+      <p class="main-form__title-slogan">Заполните анкету, и мы подберем <br>
+        программу питания для вашего кота</p>
+      <div class="main-form__container form">
+        <div class="form__pet">
+          <h2 class="visually-hidden">Данные кота</h2>
+          <ul class="form__pet-list">
+            <li class="form__pet-name">
+              <label class="form__pet-name-label" for="form__pet-name-input">имя:*</label>
+              <input class="form__pet-name-input" title="Введите имя питомца." type="text" id="form__pet-name-input"
+                placeholder="барсик">
             </li>
-            <li class="form__pet-add-list-item">
-              <label class="form__pet-add-water" for="form__pet-add-water-input">
-                <input class="form__pet-add-water-input form__pet-checkbox-size" type="checkbox"
-                  id="form__pet-add-water-input"><span class="form__pet-control-mark"></span>
-                <span class="form__pet-checkbox-text">питьевая вода</span></label>
+            <li class="form__pet-weight">
+              <label class="form__pet-weight-label" for="form__pet-weight-input">вес (кг):*</label>
+              <input class="form__pet-weight-input" title="Введите вес питомца." type="text" id="form__pet-weight-input"
+                placeholder="7">
             </li>
-            <li class="form__pet-add-list-item">
-              <label class="form__pet-add-milk" for="form__pet-add-milk-input">
-                <input class="form__pet-add-milk-input form__pet-checkbox-size" type="checkbox"
-                  id="form__pet-add-milk-input">
-                <span class="form__pet-control-mark"></span>
-                <span class="form__pet-checkbox-text">молоко</span></label>
+            <li class="form__pet-age">
+              <label class="form__pet-age-label" for="form__pet-age-input">Возраст (лет):</label>
+              <input class="form__pet-age-input" title="Введите возраст питомца." type="text" id="form__pet-age-input"
+                placeholder="7">
             </li>
-            <li class="form__pet-add-list-item">
-              <label class="form__pet-add-vitamins" for="form__pet-add-vitamins-input">
-                <input class="form__pet-add-vitamins-input form__pet-checkbox-size" type="checkbox"
-                  id="form__pet-add-vitamins-input">
-                <span class="form__pet-control-mark"></span>
-                <span class="form__pet-checkbox-text">витамины</span></label>
+          </ul>
+          <ul class="form__pet-point-list">
+            <li class="form__pet-point-item">
+              <label class="form__pet-point-slim" for="form__pet-point-slim-input">
+                <input class="form__pet-point-slim-input form__pet-radio-pick-size" title="Кнопка. Похудение."
+                  type="radio" id="form__pet-point-slim-input" checked name="radio-button"><span
+                  class="form__pet-control-radio-mark"></span>
+                <span class="form__pet-radio-text">похудение</span></label>
+            </li>
+            <li class="form__pet-point-item">
+              <label class="form__pet-point-power" for="form__pet-point-power-input">
+                <input class="form__pet-point-power-input form__pet-radio-pick-size" title="Кнопка. Набор массы."
+                  type="radio" id="form__pet-point-power-input" name="radio-button"><span
+                  class="form__pet-control-radio-mark"></span>
+                <span class="form__pet-radio-text">Набор массы</span></label>
+            </li>
+            <li class="form__pet-point-item">
+              <label class="form__pet-point-advice" for="form__pet-point-advice-input">
+                <input class="form__pet-point-advice-input form__pet-radio-pick-size"
+                  title="Кнопка. Не знаю (Нужен ваш совет)." type="radio" id="form__pet-point-advice-input"
+                  name="radio-button"><span class="form__pet-control-radio-mark"></span>
+                <span class="form__pet-radio-text">Не знаю (Нужен ваш совет)</span></label>
             </li>
           </ul>
         </div>
+      </div>
+    </div>
+    <section class="form__pet-owner">
+      <div class="form__pet-owner-container">
+        <h2 class="form__pet-owner-contacts">Контактные данные (владельца кота)</h2>
+      </div>
+      <div class="form__pet-owner-blocks">
+        <div class="form__pet-owner-block">
+          <label class="form__pet-owner-email form__pet-owner-email-input--error"
+            for="form__pet-owner-email-input">E-mail:*</label>
+          <input class="form__pet-owner-email-input" title="Введите свой, или кота имейл." type="email"
+            id="form__pet-owner-email-input" placeholder="кuklachev@gmail.com">
+          <svg class="form__pet-mail-icon" width="19" height="14" viewBox="0 0 19 14" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <line x1="1.18955" y1="6" x2="1.18955" y2="14" stroke-width="1.3" />
+            <line x1="18.1896" y1="6" x2="18.1896" y2="14" stroke-width="1.3" />
+            <line x1="0.539551" y1="13.35" x2="18.5396" y2="13.35" stroke-width="1.3" />
+            <line x1="0.539551" y1="1.35" x2="18.5396" y2="1.35" stroke-width="1.3" />
+            <path d="M17.8896 3.1821L9.53957 9.67654L1.18955 3.18209V1.65H4.03955L9.53957 1.65H14.5396H17.8896V3.1821Z"
+              stroke-width="1.3" />
+          </svg>
+        </div>
+        <div class="form__pet-owner-block">
+          <label class="form__pet-owner-phone form__pet-owner-phone-input--error"
+            for="form__pet-owner-phone-input">Телефон:*</label>
+          <input class="form__pet-owner-phone-input" title="Введите свой, или кота номер телефона." type="tel"
+            id="form__pet-owner-phone-input" placeholder="8 (960) 900-60-90">
+          <svg class="form__pet-phone-icon" width="20" height="20" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2403_1625)">
+              <path
+                d="M17.7561 9.4H9.61816V10.6H17.7561L15.7455 12.7L16.6072 13.6L19.5752 10.5C19.6684 10.3702 19.7188 10.2123 19.7188 10.05C19.7188 9.88772 19.6684 9.72982 19.5752 9.6L16.6072 6.5L15.7455 7.4L17.7561 9.4Z" />
+              <path
+                d="M8.37362 19.4V13.2C8.36256 13.0447 8.29849 12.8987 8.19306 12.7886C8.08763 12.6785 7.94786 12.6116 7.79917 12.6H3.5866C3.59153 12.9167 3.71415 13.2189 3.92855 13.4428C4.14295 13.6668 4.43232 13.7949 4.73548 13.8H7.12899V18.8H3.5866C3.35992 18.8149 3.13268 18.7825 2.91809 18.7048C2.70349 18.6271 2.50582 18.5057 2.33656 18.3475C2.1673 18.1893 2.02983 17.9976 1.93215 17.7834C1.83446 17.5693 1.7785 17.337 1.76753 17.1V3.10001C1.75968 2.6373 1.92564 2.18977 2.22987 1.85331C2.5341 1.51686 2.95238 1.31824 3.39512 1.30001H7.12899V6.30001H4.83122C4.52806 6.30516 4.23869 6.43324 4.02429 6.65718C3.80989 6.88112 3.68727 7.18336 3.68234 7.50001H7.89491C8.0436 7.48846 8.18337 7.42154 8.2888 7.31142C8.39423 7.2013 8.4583 7.05531 8.46936 6.90001V0.600012C8.42369 0.443872 8.33642 0.304534 8.21775 0.198285C8.09907 0.0920352 7.95389 0.0232649 7.79917 1.23734e-05H3.5866C3.20936 -0.0133408 2.8333 0.0511002 2.47993 0.189651C2.12655 0.328202 1.80279 0.538145 1.52714 0.807477C1.2515 1.07681 1.02939 1.40025 0.8735 1.7593C0.717613 2.11835 0.631012 2.50598 0.618647 2.90001V16.8C0.590902 17.1977 0.642233 17.597 0.769411 17.9729C0.89659 18.3489 1.09686 18.6932 1.35764 18.9844C1.61841 19.2756 1.93405 19.5072 2.28469 19.6648C2.63534 19.8224 3.0134 19.9024 3.39512 19.9H7.79917C7.86953 19.915 7.94222 19.9133 8.01186 19.895C8.0815 19.8767 8.1463 19.8423 8.20147 19.7942C8.25664 19.7462 8.30075 19.6859 8.33055 19.6176C8.36035 19.5494 8.37507 19.475 8.37362 19.4Z" />
+            </g>
+            <defs>
+              <clipPath id="clip0_2403_1625">
+                <rect width="19.1481" height="20" transform=" translate(0.618652)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </section>
+    <section class="form__pet-comment">
+      <div class="form__pet-comment-container">
+        <h2 class="form__pet-comment-title">Комментарий</h2>
+        <div>
+          <label class="form__pet-comment-text" for="form__pet-comment-text-input"></label>
+          <textarea class="form__pet-comment-text-input" title="Расскажите обо всех повадках кота."
+            id="form__pet-comment-text-input" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </div>
+      </div>
+    </section>
+    <section class="form__pet-add">
+      <div class="form__pet-add-container">
+        <h2 class="form__pet-add-title">Дополнительно</h2>
+        <ul class="form__pet-add-list">
+          <li class="form__pet-add-list-item">
+            <label class="form__pet-add-sugar" for="form__pet-add-sugar-input">
+              <input class="form__pet-add-sugar-input form__pet-checkbox-size" title="Галочка. Сахарозаменитель."
+                type="checkbox" id="form__pet-add-sugar-input" checked><span class="form__pet-control-mark"></span>
+              <span class="form__pet-checkbox-text">сахарозаменитель</span></label>
+          </li>
+          <li class="form__pet-add-list-item">
+            <label class="form__pet-add-water" for="form__pet-add-water-input">
+              <input class="form__pet-add-water-input form__pet-checkbox-size" title="Галочка. Питьевая вода."
+                type="checkbox" id="form__pet-add-water-input"><span class="form__pet-control-mark"></span>
+              <span class="form__pet-checkbox-text">питьевая вода</span></label>
+          </li>
+          <li class="form__pet-add-list-item">
+            <label class="form__pet-add-milk" for="form__pet-add-milk-input">
+              <input class="form__pet-add-milk-input form__pet-checkbox-size" title="Галочка. Молоко." type="checkbox"
+                id="form__pet-add-milk-input">
+              <span class="form__pet-control-mark"></span>
+              <span class="form__pet-checkbox-text">молоко</span></label>
+          </li>
+          <li class="form__pet-add-list-item">
+            <label class="form__pet-add-vitamins" for="form__pet-add-vitamins-input">
+              <input class="form__pet-add-vitamins-input form__pet-checkbox-size" title="Галочка. Витамины."
+                type="checkbox" id="form__pet-add-vitamins-input">
+              <span class="form__pet-control-mark"></span>
+              <span class="form__pet-checkbox-text">витамины</span></label>
+          </li>
+        </ul>
         <div class="form__pet-add-wrapper">
-          <button class="form__pet-add-button button">отправить заявку</button>
+          <button class="form__pet-add-button button" title="Кнопка отправки заявки.">отправить заявку</button>
           <p class="form__add-info">* — Обязательные поля</p>
         </div>
       </div>
-    </div>
+    </section>
     <section class="adress">
-      <div class="adress__cooperation adress__cooperation-bkgd">
-        <h3 class="adress__cooperation-title">приглашаем <br> к сотрудничеству <br> дилеров!</h3>
-        <div>
-          <p class="adress__cooperation-street">ул. Большая <br> Конюшенная, д. 19/8</p>
-          <p class="adress__cooperation-city">Санкт-Петербург</p>
+      <div class="adress__container">
+        <div class="adress__cooperation adress__cooperation-bkgd">
+          <h3 class="adress__cooperation-title">приглашаем <br> к сотрудничеству <br> дилеров!</h3>
+          <div>
+            <p class="adress__cooperation-street">ул. Большая <br> Конюшенная, д. 19/8</p>
+            <p class="adress__cooperation-city">Санкт-Петербург</p>
+          </div>
         </div>
       </div>
-      <div class="adress__bkgd adress__bkgd-margin">
-        <img class="adress__map-icon" src="img/map_icon.svg" width="57" height="53" alt="Иконка указатель">
-      </div>
+      <iframe class="adress__bkgd"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003151!2d30.320858716211177!3d59.938719169054096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1663876078903!5m2!1sru!2s"
+        width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+      </iframe>
     </section>
   </main>
   <footer class="footer">
-    <a class="footer__logo">
-      <svg class="footer__logo-cat" width="128" height="24" viewBox="0 0 128 24" xmlns="http://www.w3.org/2000/svg">
-        <use href="img/sprite.svg#footer_logo"></use>
-      </svg> </a>
-    <div class="footer__social">
-      <a href="https://vk.com/htmlacademy">
-        <svg class="footer__social-vk" width="27" height="17" viewBox="0 0 27 17" xmlns="http://www.w3.org/2000/svg">
-          <use href="img/sprite.svg#vk"></use>
-        </svg>
-        <span class="footer__social-vk visually-hidden">вконтакте</span>
-      </a>
-      <a href="https://www.youtube.com/user/htmlacademyru">
-        <svg class="footer__social-youtube" width="24" height="19" viewBox="0 0 24 19"
-          xmlns="http://www.w3.org/2000/svg">
-          <use href="img/sprite.svg#youtube"></use>
-        </svg>
-        <span class="footer__social-youtube visually-hidden">ютуб</span></a>
-      <a href="https://t.me/htmlacademy"><svg class="footer__social-tg" width="20" height="18" viewBox="0 0 20 18"
-          xmlns="http://www.w3.org/2000/svg">
-          <use href="img/sprite.svg#tg"></use>
-        </svg><span class="footer__social-tg visually-hidden">телеграм</span></a>
-    </div>
-    <div class="footer__html-academy">
-      <a class="footer__html-academy-link" href="https://htmlacademy.ru/study">
-        <div class="footer__html">
-          <svg class="footer__html-text" width="113" height="16" viewBox="0 0 113 16"
+    <div class="footer__container">
+      <a class="footer__logo" title="Перейти на главную страницу." href="index.html">
+        <svg class="footer__logo-cat" width="128" height="24" viewBox="0 0 128 24" xmlns="http://www.w3.org/2000/svg">
+          <use href="img/sprite.svg#footer_logo"></use>
+        </svg> </a>
+      <div class="footer__social">
+        <a title="Перейти на страницу вконтакте." href="https://vk.com/htmlacademy">
+          <svg class="footer__social-vk" width="27" height="17" viewBox="0 0 27 17" xmlns="http://www.w3.org/2000/svg">
+            <use href="img/sprite.svg#vk"></use>
+          </svg>
+          <span class="footer__social-vk visually-hidden">вконтакте</span>
+        </a>
+        <a title="Перейти на страницу ютуба." href="https://www.youtube.com/user/htmlacademyru">
+          <svg class="footer__social-youtube" width="24" height="19" viewBox="0 0 24 19"
             xmlns="http://www.w3.org/2000/svg">
-            <use href="img/sprite.svg#html_text"></use>
+            <use href="img/sprite.svg#youtube"></use>
           </svg>
-          <svg class="footer__html-logo" width="27" height="34" viewBox="0 0 27 34" xmlns="http://www.w3.org/2000/svg">
-            <use href="img/sprite.svg#html_logo"></use>
-          </svg>
-        </div>
-        <span class="visually-hidden">html-academy</span>
-      </a>
+          <span class="footer__social-youtube visually-hidden">ютуб</span></a>
+        <a title="Перейти на страницу телеграм." href="https://t.me/htmlacademy"><svg class="footer__social-tg"
+            width="20" height="18" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
+            <use href="img/sprite.svg#tg"></use>
+          </svg><span class="footer__social-tg visually-hidden">телеграм</span></a>
+      </div>
+      <div class="footer__html-academy">
+        <a title="Перейти на страницу академии хтмл." class="footer__html-academy-link"
+          href="https://htmlacademy.ru/study">
+          <div class="footer__html">
+            <svg class="footer__html-text" width="113" height="16" viewBox="0 0 113 16"
+              xmlns="http://www.w3.org/2000/svg">
+              <use href="img/sprite.svg#html_text"></use>
+            </svg>
+            <svg class="footer__html-logo" width="27" height="34" viewBox="0 0 27 34"
+              xmlns="http://www.w3.org/2000/svg">
+              <use href="img/sprite.svg#html_logo"></use>
+            </svg>
+          </div>
+          <span class="visually-hidden">html-academy</span>
+        </a>
+      </div>
     </div>
   </footer>
   <script src="js/script.js"></script>

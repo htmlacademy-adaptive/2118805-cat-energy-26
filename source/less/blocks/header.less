@@ -11,8 +11,16 @@
 }
 
 .header__container {
+  margin: 0 auto;
+  width: 320px;
+
   @media (min-width: @tablet-width) {
     .flexible ();
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
   }
 }
 

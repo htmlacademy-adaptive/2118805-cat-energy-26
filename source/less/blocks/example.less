@@ -1,19 +1,10 @@
 .example {
-  background-color: #eaeaea;
-  width: 320px;
   box-sizing: border-box;
   margin: 49px -20px 0;
   padding: 25px 20px 40px 20px;
+  background-color: #eaeaea;
 
-  @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
-    width: 708px;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1440px;
+  @media (min-width: @tablet-width) {
     background-color: #ffffff;
     margin: 0;
     padding: 0;
@@ -21,14 +12,40 @@
 }
 
 .example__block {
-  position: relative;
-
   @media (min-width: @desktop-width) {
     background-color: @color;
     position: relative;
-    left: -110px;
     box-sizing: border-box;
+  }
+}
+
+.example__block-container {
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
     padding: 70px 110px 53px;
+  }
+}
+
+.example__wrapper-title {
+  margin: 0 auto;
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
     width: 1440px;
   }
 }
@@ -37,16 +54,16 @@
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
-  margin: 0 0 40px;
+  margin: 0 20px 40px;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin: 51px 0 65px;
+    margin: 51px 30px 65px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 53px 0 77px;
+    margin: 53px 110px 77px;
   }
 }
 
@@ -240,7 +257,7 @@
 
   @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
     position: absolute;
-    left: 75px;
+    left: 103px;
     top: 300px;
     width: 560px;
     height: 512px;
@@ -308,7 +325,7 @@
 
 .example__toggle {
   position: absolute;
-  left: 120px;
+  left: 140px;
   display: block;
   fill: #666666;
 
@@ -379,11 +396,9 @@
 
 .example__bkgd-add {
   display: none;
-  margin-left: -30px;
 
   @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
     display: block;
-    width: 768px;
     height: 462px;
     margin-top: 248px;
     background-color: #eaeaea;
