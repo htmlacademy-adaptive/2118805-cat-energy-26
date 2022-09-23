@@ -1,4 +1,17 @@
 .slogan {
+  margin: 0 auto;
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
+}
+
+.slogan__container {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -133,14 +146,19 @@
 
 .slogan__title-button {
   margin-top: 302px;
+  text-decoration: none;
+  text-align: center;
+  padding: 11px;
 
   @media (min-width: @tablet-width) and (max-width: @max-tablet-width) {
     margin: 49px 0 0 3px;
     width: 244px;
+    padding: 16px;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 52px;
     width: 244px;
+    padding: 16px;
   }
 }

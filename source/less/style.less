@@ -1,17 +1,5 @@
-// Начните писать стили здесь
-@color: #f2f2f2;
-@arial: "Arial", sans-serif;
-
-.flexible () {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@tablet-width: 768px;
-@max-tablet-width: 1439px;
-@desktop-width: 1440px;
-@mobile-width-only: 767px;
+@import "./blocks/media.less";
+@import "./blocks/global.less";
 @import "./blocks/fonts.less";
 @import "./blocks/button.less";
 @import "./blocks/header.less";
@@ -29,46 +17,3 @@
 @import "./blocks/catalog-item.less";
 @import "./blocks/additional-item.less";
 @import "./blocks/nojs.less";
-
-html {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  background-color: #ffffff;
-  margin: 0 auto;
-  width: 320px;
-  box-sizing: border-box;
-  font-family: "Oswald", sans-serif;
-  min-height: 100%;
-  font-size: 14px;
-  line-height: 18px;
-
-  @media (min-width: @tablet-width) {
-    font-size: 16px;
-    line-height: 24px;
-    width: 768px;
-  }
-
-  @media (min-width: @desktop-width) {
-    font-size: 16px;
-    line-height: 24px;
-    width: 1440px;
-  }
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
